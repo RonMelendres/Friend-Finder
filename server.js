@@ -78,7 +78,7 @@ app.post("/api/friends", function(req, res) {
     var newFriends = req.body;
     newFriends.name = newFriends.name.replace(/\s+/g, "").toLowerCase();
     console.log(newFriends);
-    guests.push(newGuest);
+    friends.push(newFriends);
 
     res.json(newFriends);
 
