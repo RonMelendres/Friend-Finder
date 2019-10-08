@@ -32,17 +32,18 @@
                 <input class="form-control" type="text" id="photo">
             </div>
             <br>
-            
+
         </div>
 
         <hr>
         <div>
+            
             <h3><strong>Question 1</strong> </h3>
             <h4>Do you love food?</h4>
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores1">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -60,7 +61,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores2">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -78,7 +79,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores3">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -96,7 +97,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores4">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -114,7 +115,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores5">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -132,7 +133,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores6">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -150,7 +151,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores7">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -168,7 +169,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores8">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -186,7 +187,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores9">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -204,7 +205,7 @@
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="scores10">
                         <option>1 (Strongly Disagree)</option>
                         <option>2</option>
                         <option>3</option>
@@ -217,7 +218,7 @@
         <br>
 
         <div>
-            <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal" >
                 Submit</button>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -229,7 +230,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" id="reveal-friend">
                             ...
                         </div>
                         <div class="modal-footer">
@@ -257,10 +258,21 @@
         $("#confirm").on("click", function (event) {
             event.preventDefault();
 
+            
+
             var newFriends = {
                 name: $("#name").val().trim(),
-                photo: $("#photo").val().trim()
-                // scores: $("#scores").val().trim(),
+                photo: $("#photo").val().trim(),
+
+                // use a for loop to get the rest of the numbers
+                
+                // scores1: $("#scores1").val().trim(), 
+                // scores2: $("#scores2").val().trim() 
+
+                score: [$("#scores1").val().trim(), $("#scores2").val().trim(), $("#scores3").val().trim(), $("#scores4").val().trim(), $("#scores5").val().trim(), $("#scores6").val().trim(), $("#scores7").val().trim(), $("#scores8").val().trim(), $("#scores9").val().trim(), $("#scores10").val().trim()]
+                // score: $("#scores").each(function(index) {
+                //     console.log(index + ": " + $(this).text());
+                // })
 
             };
 
@@ -269,6 +281,19 @@
                     console.log(data);
 
                 });
+
+                // get function compare current score to all scores
+                // when comparing, do not post new friend
+                // 
+
+
+
+
+
+            // To display friend when match is finished
+            // var revealFriend = {
+            //     reveal: $("#reveal-friend").val().trim()
+            // };
         });
 
 
