@@ -9,12 +9,10 @@ module.exports = function(app) {
         var newFriends = req.body;
         newFriends.name = newFriends.name.replace(/\s+/g, "").toLowerCase();
         console.log(newFriends);
-        // console.log(req.body);
         
         friends.push(newFriends);
 
         // res.json(newFriends);
-    
     });
 }
 

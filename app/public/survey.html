@@ -37,18 +37,21 @@
 
         <hr>
         <div>
-            
+            <h5>Directions: For each question, choose a number between 1 and 5 with 1 being "Strongly Disagree" and 5
+                being "Strongly Agree".</h5>
+            <br>
+
             <h3><strong>Question 1</strong> </h3>
             <h4>Do you love food?</h4>
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores1">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -62,11 +65,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores2">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -80,11 +83,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores3">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -98,11 +101,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores4">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -116,11 +119,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores5">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -134,11 +137,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores6">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -152,11 +155,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores7">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -170,11 +173,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores8">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -188,11 +191,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores9">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -206,11 +209,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Choose an option</label>
                     <select class="form-control" id="scores10">
-                        <option>1 (Strongly Disagree)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (Strongly Agree)</option>
+                        <option>5</option>
                     </select>
                 </div>
             </form>
@@ -218,7 +221,7 @@
         <br>
 
         <div>
-            <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal" >
+            <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">
                 Submit</button>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -251,28 +254,18 @@
                 <a href="https://github.com/RonMelendres/Friend-Finder"> GitHub Repo</a>
             </p>
         </div>
-
     </div>
+
     <script type="text/javascript">
 
         $("#confirm").on("click", function (event) {
             event.preventDefault();
 
-            
-
             var newFriends = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
 
-                // use a for loop to get the rest of the numbers
-                
-                // scores1: $("#scores1").val().trim(), 
-                // scores2: $("#scores2").val().trim() 
-
-                score: [$("#scores1").val().trim(), $("#scores2").val().trim(), $("#scores3").val().trim(), $("#scores4").val().trim(), $("#scores5").val().trim(), $("#scores6").val().trim(), $("#scores7").val().trim(), $("#scores8").val().trim(), $("#scores9").val().trim(), $("#scores10").val().trim()]
-                // score: $("#scores").each(function(index) {
-                //     console.log(index + ": " + $(this).text());
-                // })
+                scores: [$("#scores1").val().trim(), $("#scores2").val().trim(), $("#scores3").val().trim(), $("#scores4").val().trim(), $("#scores5").val().trim(), $("#scores6").val().trim(), $("#scores7").val().trim(), $("#scores8").val().trim(), $("#scores9").val().trim(), $("#scores10").val().trim()]
 
             };
 
@@ -282,20 +275,19 @@
 
                 });
 
-                // get function compare current score to all scores
-                // when comparing, do not post new friend
-                // 
+            // Notes: Here are the steps that are supposed to happen after posting the new data in /api/friends. Everything that still needs work will go between this comment and the bottom script tag. Also there is only one hard coded data set in friends.js because was planning on doing that last.
 
+            // Create a function that will convert "scores" in var newFriends from strings to integers. Also an alternative is to use a for loop rather than gathering the data from the questions individually. 
+            // Use a get function to compare newFriends score to the api data scores. To compare all the data scores, you need a for loop to scan each data objects.
+            // While the for loop scans the api data, we need math to determine the comparison score. We take the numbers from the newFriends data array and the arrays of the other scores (one by one) and get the difference of each index 0-9. 
+                // If the numbers of same indexes are the same, that will equal 0.
+                // If the numbers of the same indexes are different, we get the difference as a positive number. 
+                // Next we add the differences and the lowest difference score is the users match.
 
-
-
-
-            // To display friend when match is finished
-            // var revealFriend = {
-            //     reveal: $("#reveal-friend").val().trim()
-            // };
+            // To display friend when match is finished. This reveal is also activated when you hit the submit button.
+            // When the modal shows up, the name and the picture from the link will show up. 
+            
         });
-
 
     </script>
 </body>
